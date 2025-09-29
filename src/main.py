@@ -8,25 +8,51 @@ def normalizar_tecla(k: str) -> str:
     if k == "space":
         return " "
     return k.replace(" ", "").replace("-", "")
-#PARTE 3
+ # PARTE 5 
+# nombre: clave de RECURSOS; mostrar: texto visible en el label; teclas: qué teclas disparan la nota
+NOTAS = [
+    {"nombre": "Do",   "mostrar": "Do", "teclas": ["w"]},
+    {"nombre": "Re",   "mostrar": "Re", "teclas": ["a"]},
+    {"nombre": "Mi",   "mostrar": "Mi", "teclas": ["s"]},
+    {"nombre": "Fa",   "mostrar": "Fa", "teclas": ["d"]},
+    {"nombre": "Sol",  "mostrar": "Sol","teclas": ["f"]},
+    {"nombre": "La",   "mostrar": "La", "teclas": ["g"]},
+    {"nombre": "Si",   "mostrar": "Si", "teclas": [" ", "space"]},
+    # Do agudo: suena con recursos Do2 (imagen/audio), pero en el label mostramos "Do"
+    {"nombre": "Do2",  "mostrar": "Do", "teclas": ["arrowright", "arrow right", "arrow-right"]},
+]
+  # PAERTE 6
+def main(pagina: ft.Page):
+    # Ventana
+    pagina.title = "Piano Makey Makey"
+    pagina.bgcolor = "black"
+    pagina.window_width = 800
+    pagina.window_height = 450
+    pagina.window_resizable = False
+    pagina.padding = 0
+    pagina.spacing = 0
 
-# PARTE 4
-# --- Recursos y configuración ---
-RECURSOS = {
-    "Do":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.wav"},
-    "Re":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.wav"},
-    "Mi":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.wav"},
-    "Fa":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.wav"},
-    "Sol": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.wav"},
-    "La":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.wav"},
-    "Si":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.wav"},
-    "Do2": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.wav"},
-}
+    # Controles base
+    teclado = ft.Image(src=TECLADO_BASE, width=800, height=300)
+    nota_label = ft.Text(
+        value="",
+        size=40,
+        color="yellow",
+        weight="bold",
+        text_align="center",
+        visible=False,
+    )
+
+    # Layout: label arriba, teclado abajo
+    pagina.add(
+        ft.Column(
+            [
+                ft.Container(content=nota_label, alignment=ft.alignment.center, height=100),
+                teclado,
+            ],
+            alignment="center",
+            horizontal_alignment="center",
+            spacing=10,
+        )
+    )
+    
