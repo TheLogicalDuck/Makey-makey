@@ -13,20 +13,20 @@ def normalizar_tecla(k: str) -> str:
 # PARTE 4
 # --- Recursos y configuración ---
 RECURSOS = {
-    "Do":  {"img": "ALL THE KEYBOARD RESOURCES/IMAGES/teclado do.png",
+    "Do":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado do.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.wav"},
-    "Re":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.png",
+    "Re":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado re.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.wav"},
-    "Mi":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.png",
+    "Mi":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado mi.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.wav"},
-    "Fa":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.png",
+    "Fa":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado fa.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.wav"},
-    "Sol": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.png",
+    "Sol": {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado sol.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.wav"},
-    "La":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.png",
+    "La":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado la.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.wav"},
-    "Si":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.png",
+    "Si":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado si.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.wav"},
-    "Do2": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.png",
+    "Do2": {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado do2.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.wav"},
 }
