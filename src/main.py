@@ -109,3 +109,4 @@ def main(pagina: ft.Page):
     pagina.on_keyboard_event = al_presionar_tecla
     pagina.update()
 
+ft.app(target=main)
