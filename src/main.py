@@ -29,3 +29,17 @@ RECURSOS = {
     "Do2": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.wav"},
 }
+# PARTE 7
+# Mapa tecla-normalizado -> {nombre,mostrar}
+tecla_a_nota = {}
+for n in NOTAS:
+    for t in n ["teclas"] :
+        tecla_a_nota[normalizar_tecla(t)] = {"nombre": n["nombre"], "mostrar": n["mostrar"]}
+        
+#Un reproductorde audio por nota, agregado al averlay de la pagina 
+nombre_a_audio = {}
+for nombre, urls in RECURSOS.items():
+    reproductor = Audio(src=urls["wan"])
+    nombre_a_audio[nombre] = reproductor
+    pagina.overlay.append(reproductor)
+        
