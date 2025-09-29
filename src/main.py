@@ -8,7 +8,22 @@ def normalizar_tecla(k: str) -> str:
     if k == "space":
         return " "
     return k.replace(" ", "").replace("-", "")
-#PARTE 3
+#PARTE 3 Funcion para mostrar la nota
+def mostrar_nota_visual(pagina, teclado, label, nombre_nota, texto_mostrar, recursos, teclado_base):
+    img_url = recursos.get(nombre_nota, {}).get("img")
+    if not img_uri:
+        return
+    teclado.src = img_uri
+    label.value = f"🎵 (texto_mostrar) 🎵"
+    label.visible = True
+    pagina.update()
+    
+    
+    def resetear():
+        teclado.src = teclado_base
+        label.visible = False
+        pagina.update()
+    threading.Timer(0.5, resetear).start()
 
 # PARTE 4
 # --- Recursos y configuración ---
@@ -30,3 +45,17 @@ RECURSOS = {
     "Do2": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.wav"},
 }
+
+# PARTE 7 Tabla De Busqueda 
+tecla_a_nota = {}
+for n in NOTAS:
+    for t in n["teclas"]:
+        tecla_a_nota[normalizar_tecla(t)] = {"nombre": n["nombre"], "mostrar": n["mostrar"]}
+        
+# PARTE 7.2 Audios
+nombre_a_audio = {}
+for nombre, uris in RECURSOS.items():
+    reproducir = Audio(src=urls["wat"])
+    nombre_a_audio[onmbre] = reproducir
+    pagina.overlay.oppend/reproducir
+    pagina.overlay.append(reproducir)    
