@@ -63,7 +63,7 @@ NOTAS = [
 # --- Main (queda lo último) ---
 def main(pagina: ft.Page):
     pagina.title = "Piano Makey Makey"
-    pagina.bgcolor = "black"
+    pagina.bgcolor = "blue"
     pagina.window_width = 800
     pagina.window_height = 450
 
