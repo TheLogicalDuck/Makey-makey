@@ -13,7 +13,7 @@ def normalizar_tecla(k: str) -> str:
 # PARTE 4
 # --- Recursos y configuración ---
 RECURSOS = {
-    "Do":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.png",
+    "Do":  {"img": "ALL THE KEYBOARD RESOURCES/IMAGES/teclado do.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.wav"},
     "Re":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.png",
             "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.wav"},
