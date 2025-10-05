@@ -115,5 +115,5 @@ Makey Makey no responde Revisa las conexiones de cables o el mapeo de teclas en 
 código.
 Ventana no abre Asegúrate de tener Flet correctamente instalado.
 
-Diagrama sencillo_
+Diagrama sencillo:
 <img width="263" height="377" alt="image" src="https://github.com/user-attachments/assets/591bb971-29dc-4fc9-9b48-55dd8c3bc1a0" />
