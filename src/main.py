@@ -2,14 +2,14 @@ import flet as ft
 from flet_audio import Audio
 import threading
 
-# --- Normalizar teclas ---
+# Normalizar teclas
 def normalizar_tecla(k: str) -> str:
     k = (k or "").lower()
     if k == "space":
         return " "
     return k.replace(" ", "").replace("-", "")
 
-# --- Mostrar nota (recibe pagina, teclado y label como argumentos) ---
+# Mostrar nota
 def mostrar_nota_visual(pagina, teclado, label, nombre_nota, texto_mostrar, recursos, teclado_base):
     img_url = recursos.get(nombre_nota, {}).get("img")
     if not img_url:
@@ -26,44 +26,44 @@ def mostrar_nota_visual(pagina, teclado, label, nombre_nota, texto_mostrar, recu
     threading.Timer(0.5, resetear).start()
 
 
-# --- Configuración de recursos y notas ---
+# Configuración de recursos y notas
 RECURSOS = {
-    "Do":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado do.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/do.wav"},
-    "Re":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado re.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/re.wav"},
-    "Mi":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado mi.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/mi.wav"},
-    "Fa":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado fa.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/fa.wav"},
-    "Sol": {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado sol.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/sol.wav"},
-    "La":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado la.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/la.wav"},
-    "Si":  {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado si.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/si.wav"},
-    "Do2": {"img": "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado do2.png",
-            "wav": "ALL-THE-KEYBOARD-RESOURCES/AUDIO/do2.wav"},
+    "Do":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.png",
+            "wav": "https://github.com/TheLogicalDuck/Makey-makey/blob/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/do.wav"},
+    "Re":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.wav"},
+    "Mi":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.wav"},
+    "Fa":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.wav"},
+    "Sol": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.wav"},
+    "La":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.wav"},
+    "Si":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.wav"},
+    "Do2": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.png",
+            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.wav"},
 }
 
-TECLADO_BASE = "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado base.png"
+TECLADO_BASE = "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Teclado.png"
 
 NOTAS = [
-    {"nombre": "Do",   "mostrar": "Do", "teclas": ["q"]},
-    {"nombre": "Re",   "mostrar": "Re", "teclas": ["w"]},
-    {"nombre": "Mi",   "mostrar": "Mi", "teclas": ["e"]},
-    {"nombre": "Fa",   "mostrar": "Fa", "teclas": ["r"]},
-    {"nombre": "Sol",  "mostrar": "Sol","teclas": ["t"]},
-    {"nombre": "La",   "mostrar": "La", "teclas": ["y"]},
-    {"nombre": "Si",   "mostrar": "Si", "teclas": ["u", "space"]},
-    {"nombre": "Do2",  "mostrar": "Do", "teclas": ["arrowright", "arrow right", "arrow-right"]},
+    {"nombre": "Do",   "mostrar": "Do", "teclas": ["q", "z"]},
+    {"nombre": "Re",   "mostrar": "Re", "teclas": ["w", "x"]},
+    {"nombre": "Mi",   "mostrar": "Mi", "teclas": ["e", "c"]},
+    {"nombre": "Fa",   "mostrar": "Fa", "teclas": ["r", "v"]},
+    {"nombre": "Sol",  "mostrar": "Sol","teclas": ["t", "b"]},
+    {"nombre": "La",   "mostrar": "La", "teclas": ["y", "n"]},
+    {"nombre": "Si",   "mostrar": "Si", "teclas": ["u", "m"]},
+    {"nombre": "Do2",  "mostrar": "Do", "teclas": ["i", ","]},
 ]
 
 
-# --- Main (queda lo último) ---
+# Main
 def main(pagina: ft.Page):
     pagina.title = "Piano Makey Makey"
-    pagina.bgcolor = "blue"
+    pagina.bgcolor = "black"
     pagina.window_width = 800
     pagina.window_height = 450
 
@@ -108,5 +108,6 @@ def main(pagina: ft.Page):
 
     pagina.on_keyboard_event = al_presionar_tecla
     pagina.update()
+
 
 ft.app(target=main)
