@@ -49,13 +49,13 @@ RECURSOS = {
 TECLADO_BASE = "ALL-THE-KEYBOARD-RESOURCES/IMAGES/teclado base.png"
 
 NOTAS = [
-    {"nombre": "Do",   "mostrar": "Do", "teclas": ["w"]},
-    {"nombre": "Re",   "mostrar": "Re", "teclas": ["a"]},
-    {"nombre": "Mi",   "mostrar": "Mi", "teclas": ["s"]},
-    {"nombre": "Fa",   "mostrar": "Fa", "teclas": ["d"]},
-    {"nombre": "Sol",  "mostrar": "Sol","teclas": ["f"]},
-    {"nombre": "La",   "mostrar": "La", "teclas": ["g"]},
-    {"nombre": "Si",   "mostrar": "Si", "teclas": [" ", "space"]},
+    {"nombre": "Do",   "mostrar": "Do", "teclas": ["q"]},
+    {"nombre": "Re",   "mostrar": "Re", "teclas": ["w"]},
+    {"nombre": "Mi",   "mostrar": "Mi", "teclas": ["e"]},
+    {"nombre": "Fa",   "mostrar": "Fa", "teclas": ["r"]},
+    {"nombre": "Sol",  "mostrar": "Sol","teclas": ["t"]},
+    {"nombre": "La",   "mostrar": "La", "teclas": ["y"]},
+    {"nombre": "Si",   "mostrar": "Si", "teclas": ["u", "space"]},
     {"nombre": "Do2",  "mostrar": "Do", "teclas": ["arrowright", "arrow right", "arrow-right"]},
 ]
 
