@@ -102,6 +102,10 @@ Pasos:
 🎵 Al presionar la tecla "Q" se muestra la nota "Do" y se escucha su
 sonido 🎵
 (Se pueden agregar capturas mostrando las imágenes Do, Re, Mi…)
+<img width="1266" height="713" alt="MAKEY 1" src="https://github.com/user-attachments/assets/39d1f944-99da-4099-bcb5-490da56c75f6" />
+<img width="1266" height="713" alt="MAKEY 2" src="https://github.com/user-attachments/assets/d101b0a2-3ade-43da-8cb6-12142afb4f7b" />
+<img width="1266" height="713" alt="MAKEY 3" src="https://github.com/user-attachments/assets/93581ccb-a500-4e47-9317-2122227b8201" />
+<img width="1266" height="713" alt="MAKEY 4" src="https://github.com/user-attachments/assets/10771c61-23eb-4bf3-8e01-3974968b482c" />
 ❌ Errores comunes
 Problema Solución
 No se escucha ninguna nota Verifica la conexión a Internet o el módulo flet-audio.
@@ -110,3 +114,4 @@ teclado Revisa si la URL del recurso sigue activa.
 Makey Makey no responde Revisa las conexiones de cables o el mapeo de teclas en el
 código.
 Ventana no abre Asegúrate de tener Flet correctamente instalado.
+
