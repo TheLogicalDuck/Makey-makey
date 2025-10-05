@@ -26,27 +26,31 @@ def mostrar_nota_visual(pagina, teclado, label, nombre_nota, texto_mostrar, recu
     threading.Timer(0.5, resetear).start()
 
 
-# Configuración de recursos y notas
+# ==============================
+# 🔹 RECURSOS (primeros assets)
+# ==============================
 RECURSOS = {
     "Do":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do.png",
-            "wav": "https://github.com/TheLogicalDuck/Makey-makey/blob/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/do.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/do.wav"},
     "Re":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Re.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/re.wav"},
     "Mi":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Mi.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/mi.wav"},
     "Fa":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Fa.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/fa.wav"},
     "Sol": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Sol.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/sol.wav"},
     "La":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/La.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/la.wav"},
     "Si":  {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Si.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/si.wav"},
     "Do2": {"img": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.png",
-            "wav": "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Do2.wav"},
+            "wav": "https://raw.githubusercontent.com/TheLogicalDuck/Makey-makey/main/ALL-THE-KEYBOARD-RESOURCES/AUDIO/do2.wav"},
 }
 
 TECLADO_BASE = "https://raw.githubusercontent.com/Prof-Luis1986/Recursos_Teclado/main/Teclado.png"
+
+# ==============================
 
 NOTAS = [
     {"nombre": "Do",   "mostrar": "Do", "teclas": ["q", "z"]},
@@ -62,8 +66,9 @@ NOTAS = [
 
 # Main
 def main(pagina: ft.Page):
-    pagina.title = "Piano Makey Makey"
-    pagina.bgcolor = "black"
+    
+    pagina.title = "Piano Makey Makey (pero el chafa)"
+    pagina.bgcolor = "green"
     pagina.window_width = 800
     pagina.window_height = 450
 
